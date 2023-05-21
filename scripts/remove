@@ -29,6 +29,8 @@ ynh_remove_systemd_config
 
 ynh_remove_nginx_config
 
+rm -R /root/.ipfs
+
 #=================================================
 # END OF SCRIPT
 #=================================================
