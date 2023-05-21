@@ -46,6 +46,9 @@ ram.runtime = "50M"
         #url = "https://dist.ipfs.tech/ipfs-cluster-service/v1.0.6/ipfs-cluster-service_v1.0.6_linux-amd64.tar.gz"
         #sha256 = "79f4caadb5437f3e3c064d03fc88a4db26c81f484560caa101ed9300f30d5732"
 
+    [resources.ports]
+    main.default = 5001
+
     [resources.system_user]
 
     [resources.install_dir]
