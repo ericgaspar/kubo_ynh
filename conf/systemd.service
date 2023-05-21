@@ -7,6 +7,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
+Environment="IPFS_PATH=$install_dir"
 ExecStart=__INSTALL_DIR__/ipfs daemon
 Restart=on-failure
 

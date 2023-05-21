@@ -38,12 +38,8 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        amd64.url = "https://github.com/ipfs/kubo/releases/download/v0.20.0/kubo_v0.20.0_linux-amd64.tar.gz"
-        amd64.sha256 = "46f3f14d75640dfedb0ee79ccb87eefa30da5c00b0af2c30f02f13454f5ab072"
-        armhf.url = "https://dist.ipfs.tech/kubo/v0.20.0/kubo_v0.20.0_linux-arm.tar.gz"
-        armhf.sha256 = "4137e3cbec7decb1bc5eb991f88426db2e67fe62ddbd0e20885d274c2941d16d"
-        arm64.url = "https://dist.ipfs.tech/kubo/v0.20.0/kubo_v0.20.0_linux-arm64.tar.gz"
-        arm64.sha256 = "a073d4e9eefd5f7c1ee24f2c9d0a8975591beea34c49d8fee4c0ea731393ef84"
+        url = "https://github.com/ipfs/kubo/releases/download/v0.20.0/kubo_v0.20.0_linux-amd64.tar.gz"
+        sha256 = "46f3f14d75640dfedb0ee79ccb87eefa30da5c00b0af2c30f02f13454f5ab072"
 
         #[resources.sources.cluster]
         #url = "https://dist.ipfs.tech/ipfs-cluster-service/v1.0.6/ipfs-cluster-service_v1.0.6_linux-amd64.tar.gz"
