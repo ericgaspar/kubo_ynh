@@ -42,7 +42,7 @@ yunohost service add $app --description="Interplanetary Filesystem" --log="/var/
 
 pushd "$install_dir"
  	./ipfs init --profile=server
- 	./ipfs API.HTTPHeaders.Access-Control-Allow-Origin '["https://test.ericandmarie.fr", "http://localhost:3000", "http://127.0.0.1:5001", "https://webui.ipfs.io"]'
+ 	./ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["https://test.ericandmarie.fr", "http://localhost:3000", "http://127.0.0.1:5001", "https://webui.ipfs.io"]'
 	./ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "POST"]'
  	mv /root/.ipfs $install_dir/.ipfs
  	chown -R $app:www-data "$install_dir/.ipfs"
