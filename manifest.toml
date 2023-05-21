@@ -21,7 +21,7 @@ architectures = "all"
 multi_instance = true
 ldap = "not_relevant"
 sso = "not_relevant"
-disk = "50M"
+disk = "20M"
 ram.build = "50M"
 ram.runtime = "50M"
 
