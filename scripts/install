@@ -48,7 +48,10 @@ yunohost service add $app --description="Interplanetary Filesystem" --log="/var/
 # chown $app:$app "$install_dir/some_config_file"
 
 pushd "$install_dir"
- 	./ipfs init #-c $install_dir/.ipfs-cluster
+ 	./ipfs init --profile server --empty-repo
+ 	./ipfs config Datastore.StorageMax 512GB
+	./ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/8080
+	./ipfs config Addresses.API /ip4/0.0.0.0/tcp/$port
 popd
 
 #=================================================
