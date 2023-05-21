@@ -7,7 +7,7 @@ description.fr = "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce
 
 version = "0.20.0~ynh1"
 
-maintainers = ["johndoe"]
+maintainers = [""]
 
 [upstream]
 license = "MIT"
@@ -45,6 +45,8 @@ ram.runtime = "50M"
     [resources.system_user]
 
     [resources.install_dir]
+
+    [resources.data_dir]
 
     [resources.permissions]
     main.url = "/"
