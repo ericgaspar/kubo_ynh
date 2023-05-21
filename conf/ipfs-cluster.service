@@ -1,0 +1,17 @@
+[Unit]
+Description=IPFS Cluster daemon
+Requires=ipfs.service
+After=ipfs.service
+
+[Service]
+ExecStart=/usr/local/bin/ipfs-cluster-service daemon --upgrade ${CLUSTER_BOOTSTRAP}
+Restart=always
+User=${USER}
+Group=${GROUP}
+Environment="IPFS_CLUSTER_PATH=/data/ipfs-cluster"
+Environment="CLUSTER_LEAVEONSHUTDOWN=${CLUSTER_LEAVEONSHUTDOWN}"
+Environment="CLUSTER_SECRET=${CLUSTER_SECRET}"
+Environment="CLUSTER_RESTAPI_HTTPLISTENMULTIADDRESS=/ip4/0.0.0.0/tcp/9094"
+
+[Install]
+WantedBy=multi-user.target

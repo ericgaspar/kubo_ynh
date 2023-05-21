@@ -10,9 +10,8 @@ version = "0.20.0~ynh1"
 maintainers = ["johndoe"]
 
 [upstream]
-license = "free"
+license = "MIT"
 website = "https://ipfs.tech/"
-demo = "https://demo.example.com"
 admindoc = "https://yunohost.org/packaging_apps"
 code = "https://github.com/ipfs/kubo"
 
