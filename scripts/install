@@ -27,10 +27,8 @@ chmod +x "$install_dir/ipfs"
 #=================================================
 ynh_script_progression --message="Adding system configurations related to $app..." --weight=1
 
-# Create a dedicated NGINX config using the conf/nginx.conf template
 ynh_add_nginx_config
 
-# Create a dedicated systemd config
 ynh_add_systemd_config
 
 yunohost service add $app --description="Interplanetary Filesystem" --log="/var/log/$app/$app.log"
@@ -42,17 +40,10 @@ yunohost service add $app --description="Interplanetary Filesystem" --log="/var/
 #=================================================
 # ynh_script_progression --message="Adding a configuration file..." --weight=1
 
-# ynh_add_config --template="some_config_file" --destination="$install_dir/some_config_file"
-
-# chmod 400 "$install_dir/some_config_file"
-# chown $app:$app "$install_dir/some_config_file"
-
 pushd "$install_dir"
  	./ipfs init --profile=server
  	./ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["http://localhost:3000", "https://webui.ipfs.io", "http://127.0.0.1:$port"]'
 	./ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["POST"]'
- 	mv /root/.ipfs $install_dir/.ipfs
- 	chown -R $app:www-data "$install_dir/.ipfs"
 popd
 
 #=================================================
