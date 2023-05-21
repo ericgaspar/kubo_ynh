@@ -42,6 +42,11 @@ ram.runtime = "50M"
         sha256 = "46f3f14d75640dfedb0ee79ccb87eefa30da5c00b0af2c30f02f13454f5ab072"
         autoupdate.strategy = "latest_github_tag"
 
+        #[resources.sources.cluster]
+        #url = "https://dist.ipfs.tech/ipfs-cluster-service/v1.0.6/ipfs-cluster-service_v1.0.6_linux-amd64.tar.gz"
+        #sha256 = "79f4caadb5437f3e3c064d03fc88a4db26c81f484560caa101ed9300f30d5732"
+
+
     [resources.system_user]
 
     [resources.install_dir]
