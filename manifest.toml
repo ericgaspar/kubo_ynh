@@ -2,8 +2,8 @@ packaging_format = 2
 
 id = "kubo"
 name = "Kubo"
-description.en = "Interplanetary Filesystem"
-description.fr = "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)"
+description.en = "Global, versioned, peer-to-peer filesystem"
+description.fr = "Système de fichiers global, versionné, peer-to-peer"
 
 version = "0.20.0~ynh1"
 
