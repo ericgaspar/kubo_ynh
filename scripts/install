@@ -48,7 +48,7 @@ yunohost service add $app --description="Interplanetary Filesystem" --log="/var/
 # chown $app:$app "$install_dir/some_config_file"
 
 pushd "$install_dir"
- 	./ipfs init --profile server --empty-repo
+ 	./ipfs init --profile=server --empty-repo #--profile=lowpower
  	mv /root/.ipfs $install_dir/.ipfs
  	chown -R $app:www-data "$install_dir/.ipfs"
 popd
