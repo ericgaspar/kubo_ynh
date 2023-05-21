@@ -58,6 +58,3 @@ ram.runtime = "50M"
 
     [resources.ports]
     main.default = 5001
-
-    [resources.apt]
-    packages = ""
