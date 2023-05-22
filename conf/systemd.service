@@ -1,15 +1,19 @@
 [Unit]
-Description=Kudo: IPFS daemon
+Description=Kudo: InterPlanetary File System (IPFS) daemon
+Documentation=https://docs.ipfs.tech/
 After=network.target
 
 [Service]
 Type=simple
 User=__APP__
 Group=__APP__
-WorkingDirectory=__INSTALL_DIR__/
-Environment="IPFS_PATH=__INSTALL_DIR__"
-ExecStart=__INSTALL_DIR__/ipfs daemon
+StateDirectory=ipfs
+#WorkingDirectory=__INSTALL_DIR__/
+Environment=IPFS_PATH="${HOME}"
+ExecStart=__INSTALL_DIR__/ipfs daemon --init --migrate
 Restart=on-failure
+KillSignal=SIGINT
+TimeoutStartSec=infinity
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these
